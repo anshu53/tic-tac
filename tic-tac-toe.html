@@ -24,6 +24,11 @@
       .disable {
         pointer-events: none;
       }
+      button {
+        width: 100px;
+        height: 50px;
+        font-size: 20px;
+      }
     </style>
   </head>
   <body>
@@ -36,8 +41,10 @@
       <div id="6" class="box" onclick="fill(id)"></div>
       <div id="7" class="box" onclick="fill(id)"></div>
       <div id="8" class="box" onclick="fill(id)"></div>
-      <div id="9" class="box" onclick="fill(id)"></div>
+      <div id="9" class="box" onclick="fill(id), reset ()"></div>
     </div>
+    <br />
+    <!-- <button onclick="reset()">Reset</button> -->
   </body>
   <script>
     var count = 1;
@@ -50,6 +57,10 @@
         document.getElementById(id).classList.add("disable");
       }
       count++;
+    }
+
+    function reset() {
+      location.reload();
     }
   </script>
 </html>
